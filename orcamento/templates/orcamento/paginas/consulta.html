@@ -1,0 +1,67 @@
+{%load static%}
+<html>
+	{%include 'orcamento/parciais/head.html'%}
+
+
+  <body onload="listarTodasDespesas()">
+
+   
+    {%include 'orcamento/parciais/nav.html'%}
+    
+    <li class="nav-item ">
+    <a class="nav-link" href="{%url 'orcamento:index'%}">Cadastro</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{%url 'orcamento:consulta'%}">Consulta</a>
+  </li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col">
+          <h1 class="display-4">Consulta de despesas</h1>
+        </div>
+      </div>
+
+      {%include 'orcamento/parciais/form.html'%}
+
+      
+      
+        <div class="col-md-2 d-flex justify-content-end">
+          <button onclick="pesquisarDespesa()" type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="tabelaDespesas"></tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    
+    {%include 'orcamento/parciais/modal.html'%}
+
+  </body>	
+
+</html>

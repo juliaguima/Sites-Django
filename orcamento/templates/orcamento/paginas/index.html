@@ -1,0 +1,56 @@
+{% load static %}
+{%include 'orcamento/parciais/head.html'%}
+
+
+
+
+<html>
+	
+
+  <body>
+
+    {%include 'orcamento/parciais/nav.html'%}
+    
+    <li class="nav-item active">
+    <a class="nav-link" href="{%url 'orcamento:index'%}">Cadastro</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{%url 'orcamento:consulta'%}">Consulta</a>
+  </li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col mb-5">
+          <h1 class="display-4">Registro de nova despesa</h1>
+        </div>
+      </div>
+
+      
+
+
+      {%include 'orcamento/parciais/form.html'%}
+
+      
+
+        <div class="col-md-2 d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" onclick="cadastrarDespesa()">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    {%include 'orcamento/parciais/modal.html'%}
+
+
+  </body>	
+
+</html>
+
+
